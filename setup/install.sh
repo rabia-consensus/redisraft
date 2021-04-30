@@ -30,6 +30,8 @@ function installGNUAutoTooling(){
   sudo apt-get install autotools-dev # install autotooling
   wait
   sudo apt-get install autoconf # install autoconf
+  wait
+  apt-get install -y libtool # install libtool
 }
 
 function getLibSSL(){
@@ -38,15 +40,9 @@ function getLibSSL(){
 
 function Main(){
   sudo apt-get update #update apt for latest package -vs
-  echo "CMake Installing-----------------------------------"
   installCMake # need cmake for compiling src
-  echo "CMake Installed------------------------------------"
-  echo "GNUTooling Installing------------------------------"
   installGNUAutoTooling
-  echo "GNUTooling Installed-------------------------------"
-  echo "LibSSL Installing----------------------------------"
   getLibSSL
-  echo "LibSSL Installed-----------------------------------"
   installRedis
 }
 
