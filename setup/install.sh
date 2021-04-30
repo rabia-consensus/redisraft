@@ -21,19 +21,19 @@ function installCMake(){
 
 function installRedis(){
   sudo add-apt-repository ppa:redislabs/redis
-  sudo apt-get install redis
+  sudo apt-get install -y redis
   sudo apt install redis-server
   sudo systemctl status redis
 }
 
 function installGNUAutoTooling(){
-  sudo apt-get install autotools-dev # install autotooling
-  sudo apt-get install autoconf # install autoconf
-  apt-get install -y libtool # install libtool
+  sudo apt-get install -y autotools-dev # install autotooling
+  sudo apt-get install -y autoconf # install autoconf
+  sudo apt-get install -y libtool # install libtool
 }
 
-function getLibSSL(){
-  sudo apt-get install -y libssl-dev
+function getLibBSD(){
+  sudo apt-get install -y libbsd-dev #use bsd queue.h implementation
 }
 
 function Main(){
