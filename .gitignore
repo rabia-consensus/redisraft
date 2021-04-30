@@ -27,3 +27,5 @@ utils/create-cluster/*.log
 utils/create-cluster/*.db
 utils/create-cluster/*.db.idx
 venv
+id_rsa
+id_rsa.pub
