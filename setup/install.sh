@@ -28,9 +28,7 @@ function installRedis(){
 
 function installGNUAutoTooling(){
   sudo apt-get install autotools-dev # install autotooling
-  wait
   sudo apt-get install autoconf # install autoconf
-  wait
   apt-get install -y libtool # install libtool
 }
 
