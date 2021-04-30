@@ -19,5 +19,6 @@ startNodes(){
       fi
       ((i++))
   done
-  redis-cli --raw -p 5001 RAFT.INFO
+  reredis-cli --raw -p ${BasePort} RAFT.INFO
 }
+startNodes
